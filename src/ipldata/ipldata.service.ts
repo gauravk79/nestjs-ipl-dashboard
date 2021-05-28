@@ -33,6 +33,11 @@ export class IpldataService {
   }
 
   getTeamMatches(name, year, count = 0): Match[] {
+    console.log(
+      `Fetching matches for team: ${name}, year: ${
+        year ? year : 'ALL'
+      } , counts: ${count == 0 ? 'ALL' : count}`,
+    );
     const team: Team = this.teams[name];
     const allmatches: Match[] = team.matches;
     let matches;
@@ -60,7 +65,8 @@ export class IpldataService {
         teamName,
         totalMatches,
         totalWins,
-        matches: this.getTeamMatches(teamName, null, 4),
+        //matches: this.getTeamMatches(teamName, null, 4),
+        matches: null,
       });
     });
 
@@ -86,7 +92,6 @@ export class IpldataService {
     this.processMatches(this.matchesInput);
     console.log(`Matches: ${this.matches.length} results`);
     this.procesTeams(this.matches);
-    console.log(`Teams: ${Object.keys(this.teams)}`);
   }
 
   private processMatches(matchInputs: MatchInput[]) {
@@ -147,7 +152,6 @@ export class IpldataService {
         team1 = new Team();
         team1.teamName = m.team1;
         team1.id = id++;
-        console.log(`Team ${team1.teamName} is id: ${team1.id}`);
       }
       team1.totalMatches += 1;
       if (m.team1 === m.matchWinner) {
@@ -165,7 +169,6 @@ export class IpldataService {
         team2 = new Team();
         team2.teamName = m.team2;
         team2.id = id++;
-        console.log(`Team ${team2.teamName} is id: ${team2.id}`);
       }
       team2.totalMatches += 1;
       if (m.team2 === m.matchWinner) {
