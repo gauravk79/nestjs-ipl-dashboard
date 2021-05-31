@@ -1,8 +1,17 @@
 ## Description
 
-IPL Dashboard webapp with React frontend, Node backend that uses Nest framework.
+IPL Dashboard webapp with React frontend, Node backend that uses Nest framework ( [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.)
+Front end code is available here: https://github.com/gauravk79/ipl-dashboard-frontend
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+After building the frontend code, copy contents of its build directory into the client folder of this repo - https://github.com/gauravk79/nestjs-ipl-dashboard/tree/main/client.
+
+## Motivation and Credits
+
+This application was developed as part of following up on fullstack tutorial from Koushik Kothagal.
+https://github.com/koushikkothagal/ipl-dashboard
+In the tutorial, the backend is with Java Spring Boot. However, I choosed to implement it in NodeJS using nest framework.
+
+I also editied front end with different fonts and Team images.
 
 ## Installation
 
