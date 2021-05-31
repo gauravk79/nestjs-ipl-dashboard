@@ -9,9 +9,10 @@ After building the frontend code, copy contents of its build directory into the 
 
 This application was developed as part of following up on fullstack tutorial from Koushik Kothagal.
 https://github.com/koushikkothagal/ipl-dashboard
-In the tutorial, the backend is with Java Spring Boot. However, I choosed to implement it in NodeJS using nest framework.
+In the tutorial, the backend is with Java Spring Boot and deploys to AWS. However, I choose to implement it in NodeJS using nest framework, and deployed it to Heroku: https://iplinfo.herokuapp.com/ (check it out!)
 
 I also editied front end with different fonts and Team images.
+Data for IPL matches is from https://www.kaggle.com/patrickb1912/ipl-complete-dataset-20082020?select=IPL+Matches+2008-2020.csv
 
 ## Installation
 
